@@ -17,8 +17,16 @@ def make_prng_key(seed):
     key = random.PRNGKey(seed)
     return key
 
-# Step 2 - split_prng_key (not yet solved)
-# TODO: implement
+# Step 2 - split_prng_key
+import jax
+
+def split_prng_key(key, num):
+    
+
+    key = make_prng_key(0)
+
+    subkeys = random.split(key, num)
+    return subkeys
 
 # Step 3 - sample_normal_matrix (not yet solved)
 # TODO: implement
