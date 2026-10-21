@@ -22,11 +22,7 @@ import jax
 
 def split_prng_key(key, num):
     
-
-    key = make_prng_key(0)
-
-    subkeys = random.split(key, num)
-    return subkeys
+    return jax.random.split(key, num)
 
 # Step 3 - sample_normal_matrix (not yet solved)
 # TODO: implement
